@@ -73,7 +73,7 @@ do
     b.Position = UDim2.new(0.103761353, 0, 0.214939028, 0)
     b.Size = UDim2.new(0, 55, 0, 55)
     b.Draggable = true
-    b.Image = "rbxassetid://113653485299271"
+    b.Image = "rbxassetid://127318174706904"
     c.Parent = b
     local function d()
         local e = Instance.new("LocalScript", b)
@@ -10178,7 +10178,7 @@ spawn(function()
                         game.StarterGui:SetCore("SendNotification", {
                             Title = "Maru Hub Notification",
                             Text = "Not Have Enough Material",
-                            Icon = "http://www.roblox.com/asset/?id=113653485299271",
+                            Icon = "http://www.roblox.com/asset/?id=127318174706904",
                             Duration = 2.5
                         })
                     else
@@ -10545,7 +10545,7 @@ local PlayersService = game:GetService("Players")
 local RunService = game:GetService("RunService")
 local VirtualInput = game:GetService("VirtualInputManager")
 local Workspace = game:GetService("Workspace")
-local BoatSpeed = 500
+local BoatSpeed = 550
 
 local SpeedBoatSlider =
     Tabs.Volcanic:AddSlider(
