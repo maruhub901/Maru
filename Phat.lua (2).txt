@@ -4100,7 +4100,7 @@ do
             end
 
             local FastAttack = {
-                Distance = 200,
+                Distance = 200000,
                 attackMobs = true,
                 attackPlayers = true,
                 Equipped = nil
@@ -4151,7 +4151,7 @@ do
                 if Equipped and Equipped.ToolTip ~= "Gun" then
                     self:AttackNearest()
                 else
-                    wait(0)
+                    wait(0,01)
                 end
             end
 
@@ -5294,7 +5294,10 @@ do
                                                 FarmPos = v.HumanoidRootPart.CFrame
                                                 MonFarm = v.Name
 
-                                                NormalAttack()
+                                                NormalAttack(0,5)
+                                                FastAttack(0,05)
+                                                SuperFastAttack(0,03)
+                                                MaruFastAttack(0,001)
                                             end
                                         until not AutoFarmMasDevilFruit or not MasteryType == "Near Mobs" or
                                             not v.Parent or
@@ -5324,7 +5327,7 @@ do
 
         spawn(
             function()
-                while wait(.1) do
+                while wait(0.1) do
                     pcall(
                         function()
                             if _G.Ectoplasm then
@@ -10166,7 +10169,7 @@ spawn(function()
     end)
 end)
 spawn(function()
-    while task.wait(0.2) do
+    while task.wait(0.1) do
         if getgenv().AutoDoughKing and Third_Sea then
             pcall(function()
                 if game.Players.LocalPlayer.Backpack:FindFirstChild("God's Chalice") or 
@@ -10542,7 +10545,7 @@ local PlayersService = game:GetService("Players")
 local RunService = game:GetService("RunService")
 local VirtualInput = game:GetService("VirtualInputManager")
 local Workspace = game:GetService("Workspace")
-local BoatSpeed = 350
+local BoatSpeed = 500
 
 local SpeedBoatSlider =
     Tabs.Volcanic:AddSlider(
